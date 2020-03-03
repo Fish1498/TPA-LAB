@@ -1,0 +1,42 @@
+public class Vocal{
+
+    public static void main(String[]args){
+        String sequence;
+        Scanner keyboard = new Scanner(System.in);
+
+
+
+        System.out.println("Introdu propozitia: ");
+        sequence = keyboard.nextLine();
+
+        MyString.StartEndMatching(sequence);
+    }
+}
+public class MyString {
+    public static void StartEndMatching(String sequence){
+        String word;
+
+        StringTokenizer tokenizer = new StringTokenizer(sequence, " ");
+        while(tokenizer.hasMoreTokens()){
+            //
+            word = tokenizer.nextToken();
+            //System.out.println(word);
+            if(word.length() >= 2) {
+                if (word.charAt(0) == word.charAt(word.length()-1)){
+                    System.out.println("Cuvantul "+word+" incepe si se termina cu acelasi caracter "+word.charAt(0));
+                }
+            }
+            //            else{
+            //                System.out.println("Propozitia "+word+" incepe cu "+word.charAt(0)+" si se termina "+   word.charAt(word.length()-1)+", aceste caractere sunt diferite.");
+            //            }
+
+
+        }
+
+    }
+}
+Concluzii :
+În lucrearea dată am realizat un program care conține 2 clase:main =  Vocal și MyString, clasa MyString comnține metoda StartEndMatching.
+Metoda StartEndMatching  caută cuvintele care se încep și se termină cu același caracter. Pentru realizarea acestei metoda tokenazier, 
+am luat fiecare cuvânt și l-am delimitat prin spațiu de restul cuvintelor, am parcurs tot string-ul și am găsit cuvintele conform cerinței.
+

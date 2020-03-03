@@ -1,3 +1,0 @@
-În lucrearea dată am realizat un program care conține 2 clase:main =  Vocal și MyString, clasa MyString comnține metoda StartEndMatching.
-Metoda StartEndMatching  caută cuvintele care se încep și se termină cu același caracter. Pentru realizarea acestei metoda tokenazier, 
-am luat fiecare cuvânt și l-am delimitat prin spațiu de restul cuvintelor, am parcurs tot string-ul și am găsit cuvintele conform cerinței.

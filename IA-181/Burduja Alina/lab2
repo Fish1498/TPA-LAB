@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Prop {
+    String prop;
+
+    public Prop(String p){ prop = p;}
+    public Prop(){
+        System.out.println("Introdu propoztia :");
+
+        Scanner s = new Scanner(System.in);
+        prop = s.nextLine();
+    }
+
+    public void show(){
+        System.out.println("Propozitie este: " + prop);
+    }
+}
+public class Cuv extends Prop {
+    int cuvant;
+
+    public Cuv(String p, int c) {
+        super(p);
+        cuvant = c;
+    }
+    public Cuv(){
+        System.out.println("Cate cuvinte are propozitia: ");
+
+        Scanner s = new Scanner(System.in);
+        cuvant = s.nextInt();
+    }
+
+    public void show(){
+        System.out.println("Propozitia  "+ prop +"  are " + cuvant + " cuvinte .");
+    }
+}
+public class Meniu {
+    public static void main(String[] args){
+
+        Prop Pob = new Prop();
+        Cuv Cob2 = new Cuv("Alina alearga repede",3);
+
+
+        Pob.show();
+        Cob2.show();
+    }
+}
+Concluzii 👍 
+În lucrearea dată am însuțit principiile de supraîncărcare a metodelor şi realizarea lor,
+principiile de suprascriere a metodelor şi realizarea lor. În această lucrare de laborator am realizat un program cu 3 clase: Cuv,Meniu,Prop.
+Clasa Meniu, este clasa pricipală care crează 2 obiecte și le afișeaza în timp ce clasa Cuv are 2 constructori și metoda de afișare, clasa Prop la fel  are
+2 contructori ș metoda de afișare.

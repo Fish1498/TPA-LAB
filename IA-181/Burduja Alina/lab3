@@ -1,0 +1,46 @@
+
+public class Mama {
+
+    int month;
+    int day;
+
+    Mama() {
+
+        System.out.println("Introdu luna și data: ");
+        Scanner s = new Scanner(System.in);
+        month = s.nextInt();
+        day = s.nextInt();
+    }
+}
+
+class Copil extends Mama {
+    String Sezon() {
+        String data;
+        if (this.month == 12 || this.month == 1 || this.month == 2) {
+            data = "Sezonul este iarna "+ " și este luna " + month + " și ziua " + day;
+        } else if (this.month == 3 || this.month == 4 || this.month == 5) {
+            data = "Sezonul este primavara "+ " și este luna " + month + " și ziua " + day;
+        } else if (this.month == 6 || this.month == 7 || this.month == 8) {
+            data = "Sezonul este vara "+ " și este luna " + month + " și ziua " + day;
+        } else if (this.month == 9 || this.month == 10 || this.month == 11){
+            data = "Sezonul este toamna "+ " și este luna " + month + " și ziua " + day;
+        }
+        else { data = "Nu există așa lună sau dată.";}
+
+            return data;
+    }
+}
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Copil c1 =new Copil();
+
+        System.out.println(c1.Sezon());
+    }
+}
+
+Concluzii: În lucrarea de laborator am însușit moștenirea. O clasă poate moşteni variabilele şi metode de la altă clasă, folosind cuvântul cheie extends.
+În cazul meu am o clasă Mama și o clasă Copil care moștenește de la clasa Mama. Moștenirea este un principiu al POO și este foarte important, ajută la 
+reducerea timpului.

@@ -1,0 +1,32 @@
+public class Except {
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+        Stack<Integer> stack = new Stack<Integer>();
+
+        int number;
+        System.out.println("Introdu numarul: ");
+        number = scanner.nextInt();
+        
+//Exceptia
+        if ( number <= 0 ) {
+            System.out.println("Numarul este mai mic sau egal cu 0.");
+            throw new IllegalArgumentException();
+        }
+
+        while (number>0){
+
+            stack.push(number%10);
+            number = number/10;
+        }
+        String newNumber ="";
+        while (!stack.empty()){
+            newNumber = stack.pop()+newNumber;
+        }
+        System.out.println(newNumber);
+    }
+}
+
+Concluzii: În această lucrare de laborator am creat o excepție, legată de problema pe care am avut-o.
+Eu am introdus un număr sub formă de cifre în stivă și am afișat numărul cu cifrele inversate. În cazul în care numărul este mai mic 
+sau egal cu 0 este o eroare.

@@ -1,0 +1,47 @@
+public class Polynom {
+    public void showPolynom(){
+        System.out.println("Polynom : ");
+    }
+}
+
+public class MyPolynom extends Polynom{
+    public void showPolynom(){
+        String term = "323x^3+2x+x-5x+5x^2";
+                System.out.println(term);
+                System.out.println();
+                System.out.println("Array Polynom : ");
+    }
+}
+
+public class ArrayPolynom extends Polynom{
+    public void showPolynom() {
+        String term = "323x^3+2x+x-5x+5x^2";
+        StringTokenizer tokenizer = new StringTokenizer(term, "+");
+        int numberofTokens = tokenizer.countTokens();
+        String[] tokensArray = new String[numberofTokens];
+        int x = 0;
+        while (tokenizer.hasMoreTokens()) {
+
+            System.out.println(tokenizer.nextToken());
+
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Polynom polynom = new Polynom();
+        Polynom mypolynom = new MyPolynom();
+        Polynom arraypolynon = new ArrayPolynom();
+
+        polynom.showPolynom();
+        mypolynom.showPolynom();
+        arraypolynon.showPolynom();
+    }
+}
+
+Conluzii:
+În această lucrare de laborator am însușit un principiu POO = Polimorfismul. Polimorfismul permite apariția unei funcții cu formă diferită,
+este practic implementat pe funcții / metode.Moștenirea și polimorfismul sunt concepte interrelaționate,
+întrucât polimorfismul dinamic se aplică claselor care implementează și conceptul de moștenire.
+Eu am creat 4 clase: Polynom, MyPolynom, ArrayPolynom și Main. Eu am avut un polynom și l-am transformat în array.
